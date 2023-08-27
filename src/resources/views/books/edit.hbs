@@ -1,0 +1,36 @@
+<div class="mt-4 create-form">
+    <h5 class="title_create">Điền thông tin về sách cần chỉnh sửa</h5>
+
+    <form class="addBook" method="post" action="/books/{{book._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên sách</label>
+            <input type="text" class="form-control" value="{{book.name}}" id="name" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Tác giả</label>
+            <input type="text" class="form-control" value="{{book.author}}" id="author" name="author">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Mô tả về sách</label>
+            <textarea type="text" class="form-control" id="description"
+                name="description"> {{book.description}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Link ảnh</label>
+            <input type="text" class="form-control" value="{{book.img}}" id="img" name="img">
+        </div>
+        <div class="mb-3">
+            <label for="rate" class="form-label">Đánh giá theo thang 10</label>
+            <input type="text" class="form-control" value="{{book.rate}}" id="rate" name="rate">
+            
+        </div>
+         <div class="mb-3">
+            
+            <label for="rate" class="form-label">Giá</label>
+            <input type="Number" class="form-control" value="{{book.price}}" id="price" name="price">
+        </div>
+
+
+        <button type="submit" class="btn-submit-create btn btn-primary">Lưu lại</button>
+    </form>
+</div>

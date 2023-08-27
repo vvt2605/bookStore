@@ -1,0 +1,74 @@
+<div class="mt-4 list_container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">TT</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Mô tả về sách</th>
+        <th scope="col">Giá bán</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each books}}
+      <tr>
+        <th scope="row">{{sum @index}}</th>
+        <td>{{this.name}}</td>
+        <td>{{this.author}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.price}}VND</td>
+        <td>
+          <a class="nav-link" href="/books/{{this._id}}/edit">Sửa </a>
+          <a class="nav-link" data-bs-toggle="modal" data-bs-id="{{this._id}}" data-bs-target="#delete-course-modal"
+            href="">Xóa</a>
+        </td>
+
+      </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+</div>
+<div class="modal" id="delete-course-modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xác nhận</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có muốn xóa sách này </p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-book" type="button" class="btn btn-danger">Xóa</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- forrm hidden delete --}}
+<form method="post" name="delete-book-form"></form>
+
+<script>
+  const exampleModal = document.getElementById('delete-course-modal')
+  var bookId
+  var deleteForm = document.forms['delete-book-form']
+  if (exampleModal) {
+    exampleModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget
+      const id = button.getAttribute('data-bs-id')
+      bookId = id
+      console.log(id)
+
+    })
+    var btnDeleteBook = document.getElementById('btn-delete-book')
+    btnDeleteBook.onclick = function () {
+      deleteForm.action= '/books/' + bookId + '?_method=DELETE'
+      deleteForm.submit()
+    }
+  }
+
+</script>

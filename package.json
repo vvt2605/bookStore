@@ -1,0 +1,36 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "sell boo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "test": "test",
+    "watch": "node-sass --watch src/resources/scss/app.scss --output src/public/css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvt2605/bookStore.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "ThanhVoVan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvt2605/bookStore/issues"
+  },
+  "homepage": "https://github.com/vvt2605/bookStore#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.4.4",
+    "mongoose-slug-generator": "^1.0.4",
+    "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}

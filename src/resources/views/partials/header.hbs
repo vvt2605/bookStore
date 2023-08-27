@@ -1,0 +1,48 @@
+<div class=" header-container">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="link_tag home_link " href="/">Digital Store</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-header" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="link_tag link_book_nav " href="/books/list">Sách của tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link_tag link_book_nav" href="/books/create">Thêm sách</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav right_nav  mb-2 mb-lg-0">
+                    {{!-- <li class="nav-item">
+                        <a class="link_tag" href="#">Type</a>
+                    </li> --}}
+                    <li class="nav-item dropdown">
+                        <a class="link_tag dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Thanh Võ
+                        </a>
+                            {{!-- <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/books/create">Bán sách </a></li>
+                                <li><a class="dropdown-item" href="/books/list">Sách đã đăng</a></li>
+                                
+                            </ul> --}}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>

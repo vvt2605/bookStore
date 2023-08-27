@@ -1,0 +1,26 @@
+<div class="mt-4">
+    <div class="container text-center">
+        <div class="row">
+            {{#each books}}
+
+            <div class="col">
+                <div class="card" style="width: 21rem;min-height:33rem; margin-top: 12px; ">
+                    <img style="width: 21rem; height:12rem;" src="{{this.img}}" class="card-img-top" alt="...">
+                    <div class="card_body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <h6>Tác giả: {{this.author}}</h6>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                    <h6 class="price_title">{{this.price }}VND</h6>
+                    <a href="#" class="btn btn-primary btn-buy-book">Mua sách</a>
+
+                </div>
+            </div>
+            {{/each}}
+
+
+        </div>
+    </div>
+
+
+</div>

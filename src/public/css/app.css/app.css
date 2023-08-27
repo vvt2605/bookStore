@@ -1,0 +1,60 @@
+.header-container {
+  height: 80px;
+  padding: 10px 0;
+  background-color: #d70018; }
+
+.link_tag {
+  color: white;
+  opacity: 0.88;
+  text-decoration: none;
+  margin-right: 12px; }
+
+.link_tag:hover {
+  opacity: 1;
+  color: white; }
+
+.home_link {
+  font-size: 20px; }
+
+.search-header {
+  width: 50%;
+  height: 40px;
+  margin: 0 12px; }
+
+.right_nav {
+  position: absolute;
+  right: 6%; }
+
+.addBook {
+  width: 60%;
+  margin: 0 auto; }
+
+.create-form {
+  justify-content: center; }
+
+.title_create {
+  margin-left: 35%; }
+
+.btn-buy-book {
+  position: absolute;
+  bottom: 0;
+  right: 0%; }
+
+.card_body {
+  margin-top: 8px;
+  text-align: left;
+  margin-left: 8px; }
+
+.price_title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 12px;
+  color: #d70018; }
+
+.link_book_nav {
+  margin: 0 12px; }
+
+.list_container {
+  margin-left: 12px;
+  margin-right: 12px; }
