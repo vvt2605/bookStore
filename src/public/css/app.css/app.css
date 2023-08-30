@@ -23,7 +23,7 @@
 
 .right_nav {
   position: absolute;
-  right: 6%; }
+  right: 2%; }
 
 .addBook {
   width: 60%;
@@ -58,3 +58,7 @@
 .list_container {
   margin-left: 12px;
   margin-right: 12px; }
+
+.login_container {
+  width: 50%;
+  margin-left: 25%; }

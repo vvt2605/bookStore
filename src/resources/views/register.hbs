@@ -1,0 +1,32 @@
+<div class="mt-4 login_container">
+    <h2>Đăng ký</h2>
+    <form action="/register" method="post">
+        <div class="form-group mb-3">
+            <label for="username">Tên tài khoản</label>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+            <label for="password-reg" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="password-conf-reg" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="password-conf-reg" name="passwordConfirm">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Đăng ký</button>
+    </form>
+    {{#if message }}
+    <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{else}}
+        <h4 class="alert  mt-4"></h4>
+    {{/if}}
+</div>
+
+
+{{!-- <form action="/register" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button>Submit</button>
+</form> --}}

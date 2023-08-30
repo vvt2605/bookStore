@@ -24,21 +24,30 @@
                     <li class="nav-item">
                         <a class="link_tag link_book_nav" href="/books/create">Thêm sách</a>
                     </li>
+
                 </ul>
+
                 <ul class="navbar-nav right_nav  mb-2 mb-lg-0">
-                    {{!-- <li class="nav-item">
-                        <a class="link_tag" href="#">Type</a>
-                    </li> --}}
+
+                    <li class="nav-item">
+                        <a class="link_tag" href="/login">Đăng nhập</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="link_tag" href="/register">Đăng ký</a>
+
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="link_tag dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Thanh Võ
+                            <p id="isLogin"></p>
                         </a>
-                            {{!-- <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/books/create">Bán sách </a></li>
-                                <li><a class="dropdown-item" href="/books/list">Sách đã đăng</a></li>
-                                
-                            </ul> --}}
+                        {{!-- <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/books/create">Bán sách </a></li>
+                            <li><a class="dropdown-item" href="/books/list">Sách đã đăng</a></li>
+
+                        </ul> --}}
                     </li>
                 </ul>
 
@@ -46,3 +55,10 @@
         </div>
     </nav>
 </div>
+
+<script>
+    const isLogin = document.getElementById('isLogin')
+    const headers = new Headers
+    isLogin.textContent = headers.get('account')
+
+</script>

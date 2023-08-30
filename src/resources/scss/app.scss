@@ -28,7 +28,7 @@
 }
 .right_nav {
     position: absolute;
-    right: 6%;
+    right: 2%;
 }
 
 // css for create.hbs
@@ -71,4 +71,9 @@
 .list_container {
     margin-left: 12px;
     margin-right: 12px;
+}
+// login css
+.login_container {
+    width: 50%;
+    margin-left: 25%;
 }
